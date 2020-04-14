@@ -164,6 +164,13 @@ prints something to the screen, you're probably in good shape!
 
 ### MacOS and Ubuntu
 
+Run these commands, swapping you `you@example.com` and `Your Name` for your actual email and name.
+
+```bash
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
 Follow [these steps](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) to connect your computer to Github
 
 ## Set up zsh
