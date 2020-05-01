@@ -1,3 +1,5 @@
+## Watch a Video of These Instructions for MacOS:
+
 [![Watch the video](https://img.youtube.com/vi/IgQbOZ1i6yM/maxresdefault.jpg)](https://youtu.be/IgQbOZ1i6yM)
 
 Welcome student! Before we embark, let's turn your computer from a software _consumer_ computer to a software _developer_ computer. Follow each of these instructions _in order_. If something doesn't work, *stop* and try the step again. If it's still not working, ask an instructor for help before you move on!
