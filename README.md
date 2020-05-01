@@ -1,9 +1,13 @@
 ## Setup your terminal
 
+Your terminal (which sometimes you'll hear referred to as a "shell" or "the command line" or a "CLI") will be your primary means of interacting with your computer in the program. This will take the place of navigating through file folders, downloading installers, and running programs by clicking on icons.
+
 ### MacOS
 
 * Download and install [iTerm2](https://www.iterm2.com/)
-* Run as login shell
+* Open iTerm2
+* Go to Profiles -> Open Profiles -> Edit Profiles -> General -> Command, and make sure "Login shell" is selected
+* Close any open terminals with Command + Q, and reopen them
 
 ### Ubuntu
 
@@ -29,7 +33,7 @@ If you did this right, you should be able to run:
 which brew
 ```
 
-and something should print out to your screen.
+and something like `/usr/local/bin/brew` print out to your screen. If you didn't see anything print out to your screen, Brew didn't install correctly.
 
 ### Ubuntu
 
