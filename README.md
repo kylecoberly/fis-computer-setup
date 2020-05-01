@@ -1,3 +1,7 @@
+Welcome student! Before we embark, let's turn your computer from a software _consumer_ computer to a software _developer_ computer. Follow each of these instructions _in order_. If something doesn't work, *stop* and try the step again. If it's still not working, ask an instructor for help before you move on!
+
+Note: When you copy/paste a command from this page to your terminal, you *may need to hit enter after everything looks like its run!*. You might still have commands that need to run!
+
 ## Setup your terminal
 
 Your terminal (which sometimes you'll hear referred to as a "shell" or "the command line" or a "CLI") will be your primary means of interacting with your computer in the program. This will take the place of navigating through file folders, downloading installers, and running programs by clicking on icons.
@@ -24,7 +28,7 @@ For consumer software, you're probably used to going to a website, downloading a
 Install [Homebrew](https://brew.sh/) by running this command on your terminal:
 
 ```bash
-xcode-select --install && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+xcode-select --install ; /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 If you did this right, you should be able to run:
@@ -59,7 +63,6 @@ Run:
 sudo apt update
 sudo apt install git zsh gnupg sqlite postgresql postgresql-contrib
 ```
-
 ## Install `rvm` and Ruby
 
 We'll use a tool called [`rvm`](https://rvm.io/) to have greater control over which version of ruby we're using.
@@ -69,11 +72,16 @@ We'll use a tool called [`rvm`](https://rvm.io/) to have greater control over wh
 Run this command:
 
 ```bash
+gpgconf --kill all
 gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-\curl -sSL https://get.rvm.io | bash -s stable
+\curl -sSL https://get.rvm.io | bash -s stable --auto-dotfiles
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 ```
+
+Remember to hit enter after everything is done!
+
+Close out of all open terminal windows with Command + Q. Then, reopen iterm2.
 
 If this worked correctly, running this in your console should print `rvm`:
 
@@ -87,6 +95,8 @@ Then, run:
 rvm install 2.6.1
 rvm use 2.6.1 --default
 ```
+
+Remember: Hit enter after you're done to be sure both commands ran!
 
 If this worked correctly, running this command:
 
@@ -107,8 +117,10 @@ IMPORTANT NOTE: Never `sudo gem install` a gem. Gems can be published by well-in
 
 ```bash
 gem update --system
-gem install rails learn-co bundler pg nokogiri
+gem install rails learn-co bundler pg nokogiri pry
 ```
+
+Hit enter when you're done!
 
 If running:
 
@@ -132,6 +144,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
 
+Hit enter when you're done!
+
 If this worked, the following command should print `nvm`:
 
 ```bash
@@ -145,6 +159,8 @@ nvm install node
 nvm use node
 nvm alias default node
 ```
+
+Hit enter when you're done!
 
 ## Install Node Packages
 
@@ -185,8 +201,9 @@ Run:
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-chsh -s /bin/zsh
 ```
+
+When it asks you if you want to switch your shell over to zsh, type "y" and hit enter.
 
 The *close all open instances of your terminal*. When you reopen your terminal, your command prompt should have a colored `~` on it.
 
