@@ -94,8 +94,8 @@ command -v rvm
 Then, run:
 
 ```bash
-rvm install 2.6.1
-rvm use 2.6.1 --default
+rvm install 2.6.5
+rvm use 2.6.5 --default
 ```
 
 Remember: Hit enter after you're done to be sure both commands ran!
