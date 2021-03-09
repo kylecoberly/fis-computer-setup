@@ -75,7 +75,7 @@ Run this command:
 
 ```bash
 gpgconf --kill all
-gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 \curl -sSL https://get.rvm.io | bash -s stable --auto-dotfiles
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -94,8 +94,8 @@ command -v rvm
 Then, run:
 
 ```bash
-rvm install 2.6.5
-rvm use 2.6.5 --default
+rvm install 2.6.6
+rvm use 2.6.6 --default
 ```
 
 Remember: Hit enter after you're done to be sure both commands ran!
@@ -119,6 +119,7 @@ IMPORTANT NOTE: Never `sudo gem install` a gem. Gems can be published by well-in
 
 ```bash
 gem update --system
+gem pristine --all
 gem install rails learn-co bundler pg nokogiri pry
 ```
 
@@ -186,14 +187,16 @@ prints something to the screen, you're probably in good shape!
 
 ### MacOS and Ubuntu
 
-Run these commands, swapping you `you@example.com` and `Your Name` for your actual email and name.
+Run these commands, **swapping** you `you@example.com` and `Your Name` for **your actual email and name**.
 
 ```bash
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
-Follow [these steps](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) to connect your computer to Github
+Follow [these steps](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) to connect your computer to Github:
+1. Check if you have an SSH key for your computer: https://docs.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys
+2. **If you do not** add one by following *all* of these steps: https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 ## Set up zsh
 
@@ -207,7 +210,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 When it asks you if you want to switch your shell over to zsh, type "y" and hit enter.
 
-The *close all open instances of your terminal*. When you reopen your terminal, your command prompt should have a colored `~` on it.
+Then *close all open instances of your terminal*. When you reopen your terminal, your command prompt should have a colored `~` on it.
 
 ## Set up Learn
 
@@ -219,7 +222,7 @@ Run:
 learn whoami
 ```
 
-And follow the instructions.
+And **follow the instructions.** Make sure you update the link with **your** *GitHub username*.
 
 ## Set up your text editor
 
@@ -241,3 +244,27 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update
 sudo apt install code
 ```
+
+## Set up NVM and Node to work every time
+
+### MacOS and Ubuntu
+
+Run:
+
+```
+code ~/.zshrc
+```
+
+* Scroll down to the bottom of the file.
+* **Paste** *all 3* of these lines at the bottom of the file:
+
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+### Congratulations
+
+Yay! You're done!! 🙌 💃
+Take a break, get a drink of water, and happy coding!!
