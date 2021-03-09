@@ -131,7 +131,7 @@ If running:
 which rails
 ```
 
-prints something like `/home/your-name/.rvm/gems/ruby-2.6.1/bin/rails`, you're probably in good shape!
+prints something like `/home/your-name/.rvm/gems/ruby-2.6.6/bin/rails`, you're probably in good shape!
 
 ## Install `nvm` and Node
 
